@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "c53b82fd-5937-4150-a7a7-e7e142e43239",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Read Course by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/course/read/3",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"course",
+						"read",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Professor By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/professor/read/3",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"professor",
+						"read",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Department by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/department/read/5",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"department",
+						"read",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Schedules All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/schedule/read",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"schedule",
+						"read"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Schedle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/schedule/delete?professorId=1&courseId=2&semester=2&year=2001",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"schedule",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "professorId",
+							"value": "1"
+						},
+						{
+							"key": "courseId",
+							"value": "2"
+						},
+						{
+							"key": "semester",
+							"value": "2"
+						},
+						{
+							"key": "year",
+							"value": "2001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/course/delete/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"course",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Professor by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/professor/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"professor",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Department by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/department/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"department",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 11,\n    \"name\": \"Astronomi\",\n    \"departmentId\": 1,\n    \"credits\": 7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/course/create",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"course",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Newly Created Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/course/read/11",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"course",
+						"read",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Professor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10,\n    \"name\": \"George Newman\",\n    \"departmentId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/professor/create",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"professor",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"professorId\": 10,\n        \"courseId\": 3,\n        \"semester\": 6,\n        \"year\": 2022\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/schedule/create",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"schedule",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
